@@ -1,4 +1,4 @@
 Avie Desai - Senior in CS at University of Tennessee <br/>
-Naveli Shah
-Ben 
-Surya 
+Naveli Shah - Senior in CS <br/> 
+Ben <br/> 
+Surya <br/>
