@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        
+        let database = Database.database().reference()
+        database.child("Users").child("Member 1").setValue("Avie Desai")
+        database.child("Users").child("Member 2").setValue("Naveli Shah")
+        database.child("Users").child("Member 3").setValue("Surya Manikonda")
+        database.child("Users").child("Member 4").setValue("Ben Chesney")
         return true
     }
 
