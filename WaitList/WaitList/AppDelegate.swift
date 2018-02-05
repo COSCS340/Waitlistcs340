@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 
+var locations = [String]()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,12 +21,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
+        
         let database = Database.database().reference()
+        
         database.child("Users").child("Member 1").setValue("Avie Desai")
         database.child("Users").child("Member 2").setValue("Naveli Shah")
         database.child("Users").child("Member 3").setValue("Surya Manikonda")
         database.child("Users").child("Member 4").setValue("Ben Chesney")
         database.child("Users").child("Member 5").setValue("Login")
+        
+        database.child("Locations").observeSingleEvent(of: .value, with: { (snapshot) in
+            locations.removeAll()
+            for child in snapshot.children
+            {
+                let snap = child as! DataSnapshot
+                let name = snap.key
+                locations.append(name)
+            }
+        })
         
         return true
     }
