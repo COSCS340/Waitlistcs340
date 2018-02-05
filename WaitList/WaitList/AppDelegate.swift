@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         database.child("Users").child("Member 2").setValue("Naveli Shah")
         database.child("Users").child("Member 3").setValue("Surya Manikonda")
         database.child("Users").child("Member 4").setValue("Ben Chesney")
+        database.child("Users").child("Member 5").setValue("Login")
+        
         return true
     }
 
