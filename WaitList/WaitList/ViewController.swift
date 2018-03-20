@@ -10,17 +10,17 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource,CLLocationManagerDelegate {
     
     let manager = CLLocationManager()
-    var pickerView = UIPickerView()
     
+    var pickerView = UIPickerView()
+
     @IBOutlet weak var restaurant: UITextField!
     
     @IBOutlet weak var checkinButton: UIButton!
     
-    @IBAction func checkinTap(_ sender: Any) {
-    }
+    var globalMyLocation = CLLocationCoordinate2D()
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -47,8 +47,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         pickerView.delegate = self
         pickerView.dataSource = self
+        
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
         
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
@@ -62,6 +68,60 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         restaurant.inputView = pickerView
         restaurant.inputAccessoryView = toolBar
        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        
+        //let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+        globalMyLocation = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        print("Global Location")
+        print(globalMyLocation)
+        //let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
+        //mapView.setRegion(region, animated: true)
+        
+        //self.mapView.showsUserLocation = true
+        
+    }
+    
+    @IBAction func checkinTap(_ sender: UIButton) {
+        let address = locationaddr[self.restaurant.text!] as! String
+        print("Address is " + address)
+        CLGeocoder().geocodeAddressString(address, completionHandler: { (placemarks, error) in
+            // Process Response
+            let destinationLocation =  self.processResponse(withPlacemarks: placemarks, error: error)
+            print("Destination")
+            print(destinationLocation.latitude)
+            print(destinationLocation.longitude)
+            let current: MKMapPoint = MKMapPointForCoordinate(self.globalMyLocation)
+            print("Current")
+            print(self.globalMyLocation.latitude)
+            print(self.globalMyLocation.longitude)
+            
+            let destination: MKMapPoint = MKMapPointForCoordinate(destinationLocation)
+            
+            let distanceInMeters: CLLocationDistance = MKMetersBetweenMapPoints(current, destination)
+            
+            let distanceInMiles = distanceInMeters * 0.000621371
+            print(distanceInMiles)
+            
+            if(distanceInMiles < 0.05)
+            {
+                
+                sender.setTitle("Checked In", for: .normal)
+                sender.backgroundColor = UIColor.green
+                
+                
+            }
+            else
+            {
+                let alert = UIAlertController(title: "Error", message: "You have to be within 0.05 miles to check in", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel) { action in
+                })
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+        })
     }
 
     private func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) -> CLLocationCoordinate2D {

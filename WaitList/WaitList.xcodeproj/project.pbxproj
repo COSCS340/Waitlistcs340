@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		344ECC472028C9730038970B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 344ECC462028C9730038970B /* GoogleService-Info.plist */; };
+		346048762037526700CF5917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346048752037526700CF5917 /* Main.storyboard */; };
+		347F98ED2060B12F0057D5B5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347F98EC2060B12F0057D5B5 /* CoreLocation.framework */; };
 		34EEF02C2024D80700D3CB46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEF02B2024D80700D3CB46 /* AppDelegate.swift */; };
 		34EEF02E2024D80700D3CB46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEF02D2024D80700D3CB46 /* ViewController.swift */; };
-		34EEF0312024D80700D3CB46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34EEF02F2024D80700D3CB46 /* Main.storyboard */; };
 		34EEF0332024D80700D3CB46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34EEF0322024D80700D3CB46 /* Assets.xcassets */; };
 		34EEF0362024D80700D3CB46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34EEF0342024D80700D3CB46 /* LaunchScreen.storyboard */; };
 		34EEF0412024D80700D3CB46 /* WaitListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEF0402024D80700D3CB46 /* WaitListTests.swift */; };
@@ -37,10 +38,11 @@
 
 /* Begin PBXFileReference section */
 		344ECC462028C9730038970B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		346048752037526700CF5917 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		347F98EC2060B12F0057D5B5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		34EEF0282024D80700D3CB46 /* WaitList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaitList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34EEF02B2024D80700D3CB46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34EEF02D2024D80700D3CB46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		34EEF0302024D80700D3CB46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34EEF0322024D80700D3CB46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34EEF0352024D80700D3CB46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34EEF0372024D80700D3CB46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347F98ED2060B12F0057D5B5 /* CoreLocation.framework in Frameworks */,
 				63D7E53BC55FE83A11EE6508 /* libPods-WaitList.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +87,7 @@
 		08B0AB2C2AEEDD848C69B392 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				347F98EC2060B12F0057D5B5 /* CoreLocation.framework */,
 				D88D596DF791C705CAE3645A /* libPods-WaitList.a */,
 			);
 			name = Frameworks;
@@ -116,7 +120,7 @@
 			children = (
 				34EEF02B2024D80700D3CB46 /* AppDelegate.swift */,
 				34EEF02D2024D80700D3CB46 /* ViewController.swift */,
-				34EEF02F2024D80700D3CB46 /* Main.storyboard */,
+				346048752037526700CF5917 /* Main.storyboard */,
 				34EEF0322024D80700D3CB46 /* Assets.xcassets */,
 				34EEF0342024D80700D3CB46 /* LaunchScreen.storyboard */,
 				344ECC462028C9730038970B /* GoogleService-Info.plist */,
@@ -263,9 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				34EEF0362024D80700D3CB46 /* LaunchScreen.storyboard in Resources */,
+				346048762037526700CF5917 /* Main.storyboard in Resources */,
 				344ECC472028C9730038970B /* GoogleService-Info.plist in Resources */,
 				34EEF0332024D80700D3CB46 /* Assets.xcassets in Resources */,
-				34EEF0312024D80700D3CB46 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,14 +382,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		34EEF02F2024D80700D3CB46 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				34EEF0302024D80700D3CB46 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		34EEF0342024D80700D3CB46 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
