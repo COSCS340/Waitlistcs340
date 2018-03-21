@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2726BC362062C40F00A90942 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726BC352062C40F00A90942 /* FeedbackViewController.swift */; };
 		344ECC472028C9730038970B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 344ECC462028C9730038970B /* GoogleService-Info.plist */; };
 		346048762037526700CF5917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346048752037526700CF5917 /* Main.storyboard */; };
 		347F98ED2060B12F0057D5B5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347F98EC2060B12F0057D5B5 /* CoreLocation.framework */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2726BC352062C40F00A90942 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		344ECC462028C9730038970B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		346048752037526700CF5917 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		347F98EC2060B12F0057D5B5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -121,6 +123,7 @@
 				34EEF02B2024D80700D3CB46 /* AppDelegate.swift */,
 				34EEF02D2024D80700D3CB46 /* ViewController.swift */,
 				346048752037526700CF5917 /* Main.storyboard */,
+				2726BC352062C40F00A90942 /* FeedbackViewController.swift */,
 				34EEF0322024D80700D3CB46 /* Assets.xcassets */,
 				34EEF0342024D80700D3CB46 /* LaunchScreen.storyboard */,
 				344ECC462028C9730038970B /* GoogleService-Info.plist */,
@@ -346,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34EEF02E2024D80700D3CB46 /* ViewController.swift in Sources */,
+				2726BC362062C40F00A90942 /* FeedbackViewController.swift in Sources */,
 				34EEF02C2024D80700D3CB46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

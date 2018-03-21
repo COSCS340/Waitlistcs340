@@ -46,5 +46,88 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
+        <!--Feedback View Controller-->
+        <scene sceneID="M6D-Cl-idt">
+            <objects>
+                <viewController id="llG-8b-5AC" customClass="FeedbackViewController" customModule="WaitList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xdP-mz-Gw0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comments" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fbs-rH-Vru">
+                                <rect key="frame" x="16" y="41" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9GM-tW-aQg">
+                                <rect key="frame" x="41" y="115" width="52" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="whitestar"/>
+                                <connections>
+                                    <action selector="star1f:" destination="llG-8b-5AC" eventType="touchUpInside" id="WhN-eg-nmh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3c-Md-NTg">
+                                <rect key="frame" x="101" y="115" width="52" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="whitestar"/>
+                                <connections>
+                                    <action selector="star2f:" destination="llG-8b-5AC" eventType="touchUpInside" id="Kq3-ca-mlG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEA-Ls-sNv">
+                                <rect key="frame" x="161" y="115" width="52" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="whitestar"/>
+                                <connections>
+                                    <action selector="star3f:" destination="llG-8b-5AC" eventType="touchUpInside" id="T6F-d9-Sd3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ome-gD-CKU">
+                                <rect key="frame" x="221" y="115" width="52" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="whitestar"/>
+                                <connections>
+                                    <action selector="star4f:" destination="llG-8b-5AC" eventType="touchUpInside" id="Vbj-ln-6I0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D9-p9-zvk">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eff-aQ-4ab">
+                                <rect key="frame" x="281" y="115" width="52" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="whitestar"/>
+                                <connections>
+                                    <action selector="star5f:" destination="llG-8b-5AC" eventType="touchUpInside" id="BtK-7H-X71"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="5zs-Rt-wWp"/>
+                    </view>
+                    <connections>
+                        <outlet property="enterFeedback" destination="Fbs-rH-Vru" id="qgt-i5-Lu0"/>
+                        <outlet property="star1" destination="9GM-tW-aQg" id="6kx-HF-7NB"/>
+                        <outlet property="star2" destination="G3c-Md-NTg" id="jMX-Lm-mdv"/>
+                        <outlet property="star3" destination="uEA-Ls-sNv" id="DNS-Ls-jLj"/>
+                        <outlet property="star4" destination="Ome-gD-CKU" id="xuP-ax-hdn"/>
+                        <outlet property="star5" destination="Eff-aQ-4ab" id="3Dn-id-mbW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PVR-fl-jmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837.60000000000002" y="132.68365817091455"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="whitestar" width="109" height="103"/>
+    </resources>
 </document>
