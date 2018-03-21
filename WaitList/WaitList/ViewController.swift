@@ -105,7 +105,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             let distanceInMiles = distanceInMeters * 0.000621371
             print(distanceInMiles)
             
-            if(distanceInMiles < 0.05)
+            if(distanceInMiles > 0.05)
             {
                 
                 sender.setTitle("Checked In", for: .normal)
