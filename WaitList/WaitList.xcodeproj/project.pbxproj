@@ -18,6 +18,7 @@
 		34EEF0412024D80700D3CB46 /* WaitListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEF0402024D80700D3CB46 /* WaitListTests.swift */; };
 		34EEF04C2024D80700D3CB46 /* WaitListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEF04B2024D80700D3CB46 /* WaitListUITests.swift */; };
 		63D7E53BC55FE83A11EE6508 /* libPods-WaitList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D88D596DF791C705CAE3645A /* libPods-WaitList.a */; };
+		69550B9F20656B3D00E9FDA9 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69550B9E20656B3D00E9FDA9 /* HomePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		34EEF04B2024D80700D3CB46 /* WaitListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitListUITests.swift; sourceTree = "<group>"; };
 		34EEF04D2024D80700D3CB46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37C046544AC3E43D7DF258BF /* Pods-WaitList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaitList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaitList/Pods-WaitList.debug.xcconfig"; sourceTree = "<group>"; };
+		69550B9E20656B3D00E9FDA9 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		C3401E6A68F664FF81BE0289 /* Pods-WaitList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaitList.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaitList/Pods-WaitList.release.xcconfig"; sourceTree = "<group>"; };
 		D88D596DF791C705CAE3645A /* libPods-WaitList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaitList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 				34EEF0342024D80700D3CB46 /* LaunchScreen.storyboard */,
 				344ECC462028C9730038970B /* GoogleService-Info.plist */,
 				34EEF0372024D80700D3CB46 /* Info.plist */,
+				69550B9E20656B3D00E9FDA9 /* HomePage.swift */,
 			);
 			path = WaitList;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				34EEF02E2024D80700D3CB46 /* ViewController.swift in Sources */,
 				2726BC362062C40F00A90942 /* FeedbackViewController.swift in Sources */,
 				34EEF02C2024D80700D3CB46 /* AppDelegate.swift in Sources */,
+				69550B9F20656B3D00E9FDA9 /* HomePage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
