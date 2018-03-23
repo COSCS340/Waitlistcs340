@@ -7,27 +7,67 @@
 //
 
 import UIKit
+import Firebase
+
+var counter = [Int]()
 
 class FeedbackViewController: UIViewController {
 
     @IBOutlet weak var enterFeedback: UITextField!
-    @IBOutlet weak var userFeedback: UITextView!
     @IBOutlet weak var star1: UIButton!
     @IBOutlet weak var star2: UIButton!
     @IBOutlet weak var star3: UIButton!
     @IBOutlet weak var star4: UIButton!
     @IBOutlet weak var star5: UIButton!
+    @IBOutlet weak var submitButton: UIButton!
+    
+    @IBAction func submitTap(_ sender: Any) {
+        var stars = ""
+        database.child("Feedback").child(String(counter.count + 1)).child("Comments").setValue(enterFeedback.text)
+        if(pressed1 == true && pressed2 == false && pressed3 == false && pressed4 == false && pressed5 == false)
+        {
+            stars = "1 Star"
+        }
+        else if(pressed1 == true && pressed2 == true && pressed3 == false && pressed4 == false && pressed5 == false)
+        {
+            stars = "2 Stars"
+        }
+        else if(pressed1 == true && pressed2 == true && pressed3 == true && pressed4 == false && pressed5 == false)
+        {
+            stars = "3 Stars"
+        }
+        else if(pressed1 == true && pressed2 == true && pressed3 == true && pressed4 == true && pressed5 == false)
+        {
+            stars = "4 Stars"
+        }
+        else
+        {
+            stars = "5 Stars"
+        }
+        
+        
+        database.child("Feedback").child(String(counter.count + 1)).child("Ratings").setValue(stars)
+        
+        print("Added feedback to firebase")
+    }
+    
+    var database = Database.database().reference()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        database.child("Feedback").observeSingleEvent(of: .value, with: { (snapshot) in
+            locations.removeAll()
+            for child in snapshot.children
+            {
+                let snap = child as! DataSnapshot
+                let name = snap.key
+                counter.append(Int(name)!)
+            }
+        })
 
         // Do any additional setup after loading the view.
-    }
-
-    @IBAction func submit(_ sender: Any) {
-        userFeedback.text = enterFeedback.text
-        
     }
     
     var pressed1 = false
