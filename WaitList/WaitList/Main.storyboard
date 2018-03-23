@@ -95,7 +95,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="oNb-8m-F1W"/>
+                                    <action selector="submitTap:" destination="llG-8b-5AC" eventType="touchUpInside" id="cYZ-wD-Jcu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eff-aQ-4ab">
@@ -124,6 +124,7 @@
                         <outlet property="star3" destination="uEA-Ls-sNv" id="DNS-Ls-jLj"/>
                         <outlet property="star4" destination="Ome-gD-CKU" id="xuP-ax-hdn"/>
                         <outlet property="star5" destination="Eff-aQ-4ab" id="3Dn-id-mbW"/>
+                        <outlet property="submitButton" destination="7D9-p9-zvk" id="k2E-lC-VoY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVR-fl-jmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
