@@ -8,30 +8,28 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 
 var locations = [String]()
 var locationaddr = [String:String]()
+var profilepics = [String:UIImage]()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    override init() {
+        super.init()
+        FirebaseApp.configure()
+    }
    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
+        
         
         let database = Database.database().reference()
-    
-        
-        database.child("Users").child("Member 1").setValue("Mockus")
-        database.child("Users").child("Member 2").setValue("Naveli Shah")
-        database.child("Users").child("Member 3").setValue("Surya Manikonda")
-        database.child("Users").child("Member 4").setValue("Ben Chesney")
-        database.child("Users").child("Member 5").setValue("Login")
-        
-        database.child("Feedback").child("1").child("Rating").setValue("Five Starts")
-        database.child("Feedback").child("1").child("Comments").setValue("Needs more color")
+        let storageref = Storage.storage().reference()
         
         database.child("Locations").observeSingleEvent(of: .value, with: { (snapshot) in
             locations.removeAll()
@@ -40,8 +38,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let snap = child as! DataSnapshot
                 let name = snap.key
                 locations.append(name)
-                locationaddr[name] = snap.value as! String
+                locationaddr[name] = snap.value as? String
+                let url = "LocationPics/" + name + ".jpg"
+                let pic = storageref.child(url)
+                pic.getData(maxSize: 1 * 1024 * 1024) { (data, error) -> Void in
+                    profilepics[name] = UIImage(data: data!)
+                    
+                }
             }
+           
         })
         
         return true

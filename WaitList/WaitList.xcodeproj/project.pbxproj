@@ -11,6 +11,8 @@
 		344ECC472028C9730038970B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 344ECC462028C9730038970B /* GoogleService-Info.plist */; };
 		346048762037526700CF5917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346048752037526700CF5917 /* Main.storyboard */; };
 		347F98ED2060B12F0057D5B5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347F98EC2060B12F0057D5B5 /* CoreLocation.framework */; };
+		34E653B02065978200EC2DF1 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E653AF2065978200EC2DF1 /* RestaurantTableViewCell.swift */; };
+		34E653B42066D5CF00EC2DF1 /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E653B32066D5CF00EC2DF1 /* CheckOutViewController.swift */; };
 		34EEF02C2024D80700D3CB46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEF02B2024D80700D3CB46 /* AppDelegate.swift */; };
 		34EEF02E2024D80700D3CB46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEF02D2024D80700D3CB46 /* ViewController.swift */; };
 		34EEF0332024D80700D3CB46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34EEF0322024D80700D3CB46 /* Assets.xcassets */; };
@@ -18,7 +20,6 @@
 		34EEF0412024D80700D3CB46 /* WaitListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEF0402024D80700D3CB46 /* WaitListTests.swift */; };
 		34EEF04C2024D80700D3CB46 /* WaitListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEF04B2024D80700D3CB46 /* WaitListUITests.swift */; };
 		63D7E53BC55FE83A11EE6508 /* libPods-WaitList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D88D596DF791C705CAE3645A /* libPods-WaitList.a */; };
-		69550B9F20656B3D00E9FDA9 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69550B9E20656B3D00E9FDA9 /* HomePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		344ECC462028C9730038970B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		346048752037526700CF5917 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		347F98EC2060B12F0057D5B5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		34E653AF2065978200EC2DF1 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		34E653B32066D5CF00EC2DF1 /* CheckOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
 		34EEF0282024D80700D3CB46 /* WaitList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaitList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34EEF02B2024D80700D3CB46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34EEF02D2024D80700D3CB46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +59,6 @@
 		34EEF04B2024D80700D3CB46 /* WaitListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitListUITests.swift; sourceTree = "<group>"; };
 		34EEF04D2024D80700D3CB46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37C046544AC3E43D7DF258BF /* Pods-WaitList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaitList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaitList/Pods-WaitList.debug.xcconfig"; sourceTree = "<group>"; };
-		69550B9E20656B3D00E9FDA9 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		C3401E6A68F664FF81BE0289 /* Pods-WaitList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaitList.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaitList/Pods-WaitList.release.xcconfig"; sourceTree = "<group>"; };
 		D88D596DF791C705CAE3645A /* libPods-WaitList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaitList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -125,12 +127,13 @@
 				34EEF02B2024D80700D3CB46 /* AppDelegate.swift */,
 				34EEF02D2024D80700D3CB46 /* ViewController.swift */,
 				346048752037526700CF5917 /* Main.storyboard */,
+				34E653AF2065978200EC2DF1 /* RestaurantTableViewCell.swift */,
 				2726BC352062C40F00A90942 /* FeedbackViewController.swift */,
 				34EEF0322024D80700D3CB46 /* Assets.xcassets */,
 				34EEF0342024D80700D3CB46 /* LaunchScreen.storyboard */,
 				344ECC462028C9730038970B /* GoogleService-Info.plist */,
 				34EEF0372024D80700D3CB46 /* Info.plist */,
-				69550B9E20656B3D00E9FDA9 /* HomePage.swift */,
+				34E653B32066D5CF00EC2DF1 /* CheckOutViewController.swift */,
 			);
 			path = WaitList;
 			sourceTree = "<group>";
@@ -351,10 +354,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E653B02065978200EC2DF1 /* RestaurantTableViewCell.swift in Sources */,
+				34E653B42066D5CF00EC2DF1 /* CheckOutViewController.swift in Sources */,
 				34EEF02E2024D80700D3CB46 /* ViewController.swift in Sources */,
 				2726BC362062C40F00A90942 /* FeedbackViewController.swift in Sources */,
 				34EEF02C2024D80700D3CB46 /* AppDelegate.swift in Sources */,
-				69550B9F20656B3D00E9FDA9 /* HomePage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

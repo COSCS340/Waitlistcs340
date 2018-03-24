@@ -20,6 +20,7 @@ class FeedbackViewController: UIViewController {
     @IBOutlet weak var star4: UIButton!
     @IBOutlet weak var star5: UIButton!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     
     @IBAction func submitTap(_ sender: Any) {
         var stars = ""
@@ -48,11 +49,18 @@ class FeedbackViewController: UIViewController {
         
         database.child("Feedback").child(String(counter.count + 1)).child("Ratings").setValue(stars)
         
-        print("Added feedback to firebase")
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let newclass: ViewController = main.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.present(newclass, animated: true, completion: nil)
     }
     
     var database = Database.database().reference()
     
+    @IBAction func cancelButtonTap(_ sender: Any) {
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let newclass: ViewController = main.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.present(newclass, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
