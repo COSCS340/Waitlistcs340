@@ -131,6 +131,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        refreshUsers(self)
     }
     
     @objc func refreshUsers(_ sender: Any) {
