@@ -24,7 +24,16 @@ class FeedbackViewController: UIViewController {
     
     @IBAction func submitTap(_ sender: Any) {
         var stars = ""
-        database.child("Feedback").child(String(counter.count + 1)).child("Comments").setValue(enterFeedback.text)
+        if(counter.count == 0)
+        {
+            counter.append(1)
+        }
+        else
+        {
+            counter.append(counter.count + 1)
+        }
+        
+        database.child("Feedback").child(String(counter[counter.count - 1])).child("Comments").setValue(enterFeedback.text)
         if(pressed1 == true && pressed2 == false && pressed3 == false && pressed4 == false && pressed5 == false)
         {
             stars = "1 Star"
@@ -47,7 +56,7 @@ class FeedbackViewController: UIViewController {
         }
         
         
-        database.child("Feedback").child(String(counter.count + 1)).child("Ratings").setValue(stars)
+        database.child("Feedback").child(String(counter[counter.count - 1])).child("Ratings").setValue(stars)
         
         let main = UIStoryboard(name: "Main", bundle: nil)
         let newclass: ViewController = main.instantiateViewController(withIdentifier: "ViewController") as! ViewController
@@ -66,7 +75,7 @@ class FeedbackViewController: UIViewController {
         super.viewDidLoad()
         
         database.child("Feedback").observeSingleEvent(of: .value, with: { (snapshot) in
-            locations.removeAll()
+            counter.removeAll()
             for child in snapshot.children
             {
                 let snap = child as! DataSnapshot
