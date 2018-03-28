@@ -42,10 +42,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let url = "LocationPics/" + name + ".jpg"
                 let pic = storageref.child(url)
                 pic.getData(maxSize: 1 * 1024 * 1024) { (data, error) -> Void in
+                    if let error = error
+                    {
+                        print(error)
+                    }
+                    else
+                    {
                     profilepics[name] = UIImage(data: data!)
+                    }
                     
                 }
             }
+            
+            
            
         })
         

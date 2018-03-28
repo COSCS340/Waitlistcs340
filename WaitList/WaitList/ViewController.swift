@@ -147,7 +147,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 let url = "LocationPics/" + name + ".jpg"
                 let pic = self.storageref.child(url)
                 pic.getData(maxSize: 1 * 1024 * 1024) { (data, error) -> Void in
-                    profilepics[name] = UIImage(data: data!)
+                    if let error = error
+                    {
+                        print(error)
+                        let url2 = "LocationPics/Ray's Place.jpg"
+                        let pic2 = self.storageref.child(url2)
+                        pic2.getData(maxSize: 1 * 1024 * 1024) { (data, error) -> Void in
+                                profilepics[name] = UIImage(data: data!)
+                        }
+                    }
+                    else
+                    {
+                        profilepics[name] = UIImage(data: data!)
+                    }
                     
                 }
             }
