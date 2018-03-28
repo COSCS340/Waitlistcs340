@@ -209,7 +209,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let distanceInMiles = distanceInMeters * 0.000621371
             print(distanceInMiles)
             
-            if(distanceInMiles > 0.05)
+            if(devstatus == false)
+            {
+            if(distanceInMiles < 0.05)
             {
                 checkoutrestaurant = sender.mylocation
                 self.database.child("Times").observeSingleEvent(of: .value, with: { (snapshot) in
@@ -239,6 +241,42 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 alert.addAction(UIAlertAction(title: "OK", style: .cancel) { action in
                 })
                 self.present(alert, animated: true, completion: nil)
+            }
+            }
+            else
+            {
+                if(distanceInMiles > 0.05)
+                {
+                    checkoutrestaurant = sender.mylocation
+                    self.database.child("Times").observeSingleEvent(of: .value, with: { (snapshot) in
+                        for child in snapshot.children
+                        {
+                            
+                            let snap = child as! DataSnapshot
+                            let name = snap.key
+                            var minutes = snap.value as? Int
+                            if(name == sender.mylocation)
+                            {
+                                minutes = minutes! + 2
+                                self.database.child("Times").child(sender.mylocation).setValue(minutes)
+                            }
+                        }
+                        
+                        
+                    })
+                    
+                    let main = UIStoryboard(name: "Main", bundle: nil)
+                    let newclass: CheckOutViewController = main.instantiateViewController(withIdentifier: "CheckOutViewController") as! CheckOutViewController
+                    self.present(newclass, animated: true, completion: nil)
+                }
+                else
+                {
+                    let alert = UIAlertController(title: "Error", message: "You have to be within 0.05 miles to check in", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .cancel) { action in
+                    })
+                    self.present(alert, animated: true, completion: nil)
+                }
+            
             }
             
         })

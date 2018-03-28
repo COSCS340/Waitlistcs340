@@ -11,6 +11,7 @@
 		344ECC472028C9730038970B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 344ECC462028C9730038970B /* GoogleService-Info.plist */; };
 		346048762037526700CF5917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346048752037526700CF5917 /* Main.storyboard */; };
 		347F98ED2060B12F0057D5B5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347F98EC2060B12F0057D5B5 /* CoreLocation.framework */; };
+		34E5A64E206BDA34006FA74B /* ModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E5A64D206BDA34006FA74B /* ModeViewController.swift */; };
 		34E653B02065978200EC2DF1 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E653AF2065978200EC2DF1 /* RestaurantTableViewCell.swift */; };
 		34E653B42066D5CF00EC2DF1 /* CheckOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E653B32066D5CF00EC2DF1 /* CheckOutViewController.swift */; };
 		34EEF02C2024D80700D3CB46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEF02B2024D80700D3CB46 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 		344ECC462028C9730038970B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		346048752037526700CF5917 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		347F98EC2060B12F0057D5B5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		34E5A64D206BDA34006FA74B /* ModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeViewController.swift; sourceTree = "<group>"; };
 		34E653AF2065978200EC2DF1 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		34E653B32066D5CF00EC2DF1 /* CheckOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutViewController.swift; sourceTree = "<group>"; };
 		34EEF0282024D80700D3CB46 /* WaitList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaitList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 				344ECC462028C9730038970B /* GoogleService-Info.plist */,
 				34EEF0372024D80700D3CB46 /* Info.plist */,
 				34E653B32066D5CF00EC2DF1 /* CheckOutViewController.swift */,
+				34E5A64D206BDA34006FA74B /* ModeViewController.swift */,
 			);
 			path = WaitList;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34E653B02065978200EC2DF1 /* RestaurantTableViewCell.swift in Sources */,
+				34E5A64E206BDA34006FA74B /* ModeViewController.swift in Sources */,
 				34E653B42066D5CF00EC2DF1 /* CheckOutViewController.swift in Sources */,
 				34EEF02E2024D80700D3CB46 /* ViewController.swift in Sources */,
 				2726BC362062C40F00A90942 /* FeedbackViewController.swift in Sources */,
