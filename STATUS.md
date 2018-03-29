@@ -21,6 +21,7 @@ We have not made any changes and followed the design and other requirements ment
 
 No changes were made from the original project proposal.
 
+As mentioned in the project proposal, the Waitlist app is specifically designed for students who are living on and around the UT campus. It can be exhausting for students to stand-in long lines, and wait longer to get food, especially during the lunch hours. If they are thinking about getting food but are in a rush or have less time between classes, they could easily look up the waiting times and determine if they can get food in less time than usual. This can save them time or maybe open up extra free time, as opposed to going to a restaurant and wait longer to be in-line and get food. By using our Waitlist app, students can manage their time wisely, as it cut downs the waiting time to get food.
 
 ## Technology:
 
