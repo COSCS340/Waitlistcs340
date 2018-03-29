@@ -60,7 +60,7 @@ Since Avie has previous experience working on iOS applications, we decided that 
 
 Schedule:
 
-The project is on schedule. As mentioned in our project proposal we have completed the goal to get the basic functionality of the application working. Now, we are testing the app, removing the features which are not working and adding necessary changes.
+The project is on schedule. Early on, it took a little bit of time to assign roles and identify our team members' strengths and weaknesses. Once we figured those components out, issues were assigned to all team members matching their strengths. Everyone was new to Xcode and Swift programming language except Avie, so it was a little difficult getting accustomed to the software and tools. Once each team member was comfortable, we began to complete issues assigned within the respecitve sprints. As mentioned in our project proposal we have completed the goal to get the basic functionality of the application working. Now, we are constantly testing the app, advancing features to be more efficient and just clean up the overall look to make it more appealing to a user.
 
 
 ## Reflection:
