@@ -1,5 +1,7 @@
 ## WaitList App
 
+Description: An app that estimates wait time for restaurants at UT campus
+
 Team: Waitlist App
 
 Team Number: 13
