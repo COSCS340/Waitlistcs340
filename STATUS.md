@@ -16,7 +16,7 @@ So far, we have managed to create and successfully build a prototype of the appl
 
 Overview:
 
-We have not made any changes, and followed the design and other requirements mentioned in the proposal.
+We have not made any changes, and have followed the design and other requirements mentioned in the proposal.
 
 
 ## Customer Value:
