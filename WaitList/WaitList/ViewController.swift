@@ -63,6 +63,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.myname.text = locations[indexPath.section]
         cell.restaurantImage.image = profilepics[cell.myname.text!]
         cell.checkinButton.mylocation = cell.myname.text!
+        cell.checkinButton.setTitleColor(UIColor.black, for: .normal)
+        cell.checkinButton.layer.borderWidth = 2
+        cell.checkinButton.layer.cornerRadius = 15
+        cell.checkinButton.backgroundColor = UIColor.red
         
         self.database.child("Times").observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children

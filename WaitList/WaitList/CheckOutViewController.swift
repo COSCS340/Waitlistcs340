@@ -49,6 +49,10 @@ class CheckOutViewController: UIViewController {
         super.viewDidLoad()
         
         whichoneLabel.text = checkoutrestaurant + "?"
+        checkoutButton.setTitleColor(UIColor.black, for: .normal)
+        checkoutButton.layer.borderWidth = 2
+        checkoutButton.layer.cornerRadius = 15
+        checkoutButton.backgroundColor = UIColor.green
 
         // Do any additional setup after loading the view.
     }

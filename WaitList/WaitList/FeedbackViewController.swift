@@ -98,7 +98,6 @@ class FeedbackViewController: UIViewController {
             star1.setImage(UIImage(named: "orangestar"), for: .normal)
             pressed1 = true;
         }else{
-            star1.setImage(UIImage(named: "whitestar"), for: .normal)
             star2.setImage(UIImage(named: "whitestar"), for: .normal)
             star3.setImage(UIImage(named: "whitestar"), for: .normal)
             star4.setImage(UIImage(named: "whitestar"), for: .normal)
@@ -118,7 +117,6 @@ class FeedbackViewController: UIViewController {
             pressed2 = true
             pressed1 = true
         }else{
-            star2.setImage(UIImage(named: "whitestar"), for: .normal)
             star3.setImage(UIImage(named: "whitestar"), for: .normal)
             star4.setImage(UIImage(named: "whitestar"), for: .normal)
             star5.setImage(UIImage(named: "whitestar"), for: .normal)
@@ -138,7 +136,6 @@ class FeedbackViewController: UIViewController {
             pressed2 = true
             pressed1 = true
         }else{
-            star3.setImage(UIImage(named: "whitestar"), for: .normal)
             star4.setImage(UIImage(named: "whitestar"), for: .normal)
             star5.setImage(UIImage(named: "whitestar"), for: .normal)
             pressed3 = false
@@ -152,14 +149,12 @@ class FeedbackViewController: UIViewController {
             star4.setImage(UIImage(named: "orangestar"), for: .normal)
             star3.setImage(UIImage(named: "orangestar"), for: .normal)
             star2.setImage(UIImage(named: "orangestar"), for: .normal)
-            star2.setImage(UIImage(named: "orangestar"), for: .normal)
             star1.setImage(UIImage(named: "orangestar"), for: .normal)
             pressed4 = true;
             pressed3 = true
             pressed2 = true
             pressed1 = true
         }else{
-            star4.setImage(UIImage(named: "whitestar"), for: .normal)
             star5.setImage(UIImage(named: "whitestar"), for: .normal)
             pressed4 = false
             pressed5 = false
