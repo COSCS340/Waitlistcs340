@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 import Firebase
 import FirebaseStorage
+import Google
 
 class MyButton : UIButton
 {
@@ -19,7 +20,7 @@ class MyButton : UIButton
 
 var checkoutrestaurant = ""
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate, GIDSignInUIDelegate {
     
     let manager = CLLocationManager()
     
@@ -108,7 +109,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        var error: NSError?
+        
+        GGLContext.sharedInstance().configureWithError(&error)
+        
+        /*if error != nil {
+            print (error ?? "some error")
+            return
+        }*/
+        GIDSignIn.sharedInstance().uiDelegate = self
+       
+        let googleSignInButton = GIDSignInButton()
+        googleSignInButton.center = view.center
+        view.addSubview(googleSignInButton)
         
         restaurants.delegate = self
         restaurants.dataSource = self

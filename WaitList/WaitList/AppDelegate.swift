@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import Google
+
 
 var locations = [String]()
 var locationaddr = [String:String]()
@@ -18,6 +20,12 @@ var profilepics = [String:UIImage]()
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url as URL!,
+            sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+            annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+    }
     
     override init() {
         super.init()
