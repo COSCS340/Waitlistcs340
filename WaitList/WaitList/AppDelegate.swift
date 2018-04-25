@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseStorage
-import Google
+import GoogleSignIn
 
 
 var locations = [String]()
@@ -17,25 +17,8 @@ var locationaddr = [String:String]()
 var profilepics = [String:UIImage]()
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url as URL!,
-            sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
-            annotation: options[UIApplicationOpenURLOptionsKey.annotation])
-    }
-    
-    override init() {
-        super.init()
-        FirebaseApp.configure()
-    }
-   
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         let database = Database.database().reference()
         let storageref = Storage.storage().reference()
         
@@ -56,15 +39,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     }
                     else
                     {
-                    profilepics[name] = UIImage(data: data!)
+                        profilepics[name] = UIImage(data: data!)
                     }
                     
                 }
             }
-            
-            
-           
         })
+    }
+    
+
+    var window: UIWindow?
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url as URL!,
+            sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+            annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+    }
+    
+    override init() {
+        super.init()
+        FirebaseApp.configure()
+    }
+   
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        GIDSignIn.sharedInstance().clientID = "1012159059525-q2063fuqvlquk8bplni1tgbd7albbgp5.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self
+        
+        
         
         return true
     }

@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 var devstatus = true
 
-class ModeViewController: UIViewController {
+class ModeViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBOutlet weak var devLabel: UILabel!
     
@@ -19,6 +20,8 @@ class ModeViewController: UIViewController {
     @IBOutlet weak var toggle: UISwitch!
     
     @IBOutlet weak var homeButton: UIButton!
+    
+    @IBOutlet weak var signInButton: GIDSignInButton!
     
     @IBAction func homeButtonHit(_ sender: Any) {
         let main = UIStoryboard(name: "Main", bundle: nil)
@@ -42,6 +45,15 @@ class ModeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         //GGLContext.sharedInstance().configureWithError(&error)
+        
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
+        let googleSignInButton = GIDSignInButton()
+        googleSignInButton.center = view.center
+        view.addSubview(googleSignInButton)
         
         if(devstatus == false)
         {

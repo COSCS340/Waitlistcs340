@@ -2,5 +2,5 @@ target 'WaitList' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
-  pod 'Google/SignIn'
+  pod 'GoogleSignIn'
 end

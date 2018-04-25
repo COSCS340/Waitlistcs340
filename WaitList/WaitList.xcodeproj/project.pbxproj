@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2726BC362062C40F00A90942 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2726BC352062C40F00A90942 /* FeedbackViewController.swift */; };
+		340AB9FC2090CCA800500108 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 340AB9FB2090CCA800500108 /* credentials.plist */; };
 		344ECC472028C9730038970B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 344ECC462028C9730038970B /* GoogleService-Info.plist */; };
 		346048762037526700CF5917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 346048752037526700CF5917 /* Main.storyboard */; };
 		347F98ED2060B12F0057D5B5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 347F98EC2060B12F0057D5B5 /* CoreLocation.framework */; };
@@ -21,7 +22,6 @@
 		34EEF0412024D80700D3CB46 /* WaitListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEF0402024D80700D3CB46 /* WaitListTests.swift */; };
 		34EEF04C2024D80700D3CB46 /* WaitListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EEF04B2024D80700D3CB46 /* WaitListUITests.swift */; };
 		63D7E53BC55FE83A11EE6508 /* libPods-WaitList.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D88D596DF791C705CAE3645A /* libPods-WaitList.a */; };
-		A7F61BD420906DF500F6ACE7 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7F61BD320906DF500F6ACE7 /* credentials.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		2726BC352062C40F00A90942 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		340AB9FB2090CCA800500108 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = credentials.plist; path = ../../../../../Downloads/credentials.plist; sourceTree = "<group>"; };
 		344ECC462028C9730038970B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		346048752037526700CF5917 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		347F98EC2060B12F0057D5B5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -62,7 +63,6 @@
 		34EEF04B2024D80700D3CB46 /* WaitListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitListUITests.swift; sourceTree = "<group>"; };
 		34EEF04D2024D80700D3CB46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37C046544AC3E43D7DF258BF /* Pods-WaitList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaitList.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WaitList/Pods-WaitList.debug.xcconfig"; sourceTree = "<group>"; };
-		A7F61BD320906DF500F6ACE7 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = credentials.plist; path = ../../../../Downloads/credentials.plist; sourceTree = "<group>"; };
 		C3401E6A68F664FF81BE0289 /* Pods-WaitList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaitList.release.xcconfig"; path = "Pods/Target Support Files/Pods-WaitList/Pods-WaitList.release.xcconfig"; sourceTree = "<group>"; };
 		D88D596DF791C705CAE3645A /* libPods-WaitList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WaitList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,7 +106,6 @@
 		34EEF01F2024D80700D3CB46 = {
 			isa = PBXGroup;
 			children = (
-				A7F61BD320906DF500F6ACE7 /* credentials.plist */,
 				34EEF02A2024D80700D3CB46 /* WaitList */,
 				34EEF03F2024D80700D3CB46 /* WaitListTests */,
 				34EEF04A2024D80700D3CB46 /* WaitListUITests */,
@@ -129,6 +128,7 @@
 		34EEF02A2024D80700D3CB46 /* WaitList */ = {
 			isa = PBXGroup;
 			children = (
+				340AB9FB2090CCA800500108 /* credentials.plist */,
 				34EEF02B2024D80700D3CB46 /* AppDelegate.swift */,
 				34EEF02D2024D80700D3CB46 /* ViewController.swift */,
 				346048752037526700CF5917 /* Main.storyboard */,
@@ -183,6 +183,7 @@
 				34EEF0252024D80700D3CB46 /* Frameworks */,
 				34EEF0262024D80700D3CB46 /* Resources */,
 				88730C0689C5CBD4D766400F /* [CP] Copy Pods Resources */,
+				2D759340953DC51105DABCE3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,7 +283,7 @@
 			files = (
 				34EEF0362024D80700D3CB46 /* LaunchScreen.storyboard in Resources */,
 				346048762037526700CF5917 /* Main.storyboard in Resources */,
-				A7F61BD420906DF500F6ACE7 /* credentials.plist in Resources */,
+				340AB9FC2090CCA800500108 /* credentials.plist in Resources */,
 				344ECC472028C9730038970B /* GoogleService-Info.plist in Resources */,
 				34EEF0332024D80700D3CB46 /* Assets.xcassets in Resources */,
 			);
@@ -305,6 +306,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2D759340953DC51105DABCE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WaitList/Pods-WaitList-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		88730C0689C5CBD4D766400F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,13 +328,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WaitList/Pods-WaitList-resources.sh",
-				"${PODS_ROOT}/GoogleAuthUtilities/Frameworks/frameworks/GoogleAuthUtilities.framework/Resources/GTMOAuth2ViewTouch.xib",
+				"${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GTMOAuth2ViewTouch.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -515,7 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2FFEU8H9GJ;
+				DEVELOPMENT_TEAM = P5E8DZ4EJ8;
 				INFOPLIST_FILE = WaitList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CS340.WaitList;
@@ -531,7 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2FFEU8H9GJ;
+				DEVELOPMENT_TEAM = P5E8DZ4EJ8;
 				INFOPLIST_FILE = WaitList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CS340.WaitList;
