@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseStorage
 import GoogleSignIn
+import FirebaseAuth
 
 
 var locations = [String]()
@@ -18,7 +19,38 @@ var profilepics = [String:UIImage]()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    
+    var window: UIWindow?
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+       
+        if let error = error
+        {
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential) { (user, error) in
+            if let error = error
+            {
+                return
+            }
+            let email = user?.email
+            let parts = email?.components(separatedBy: "@")
+            if(parts![1] != "vols.utk.edu")
+            {
+                GIDSignIn.sharedInstance().signOut()
+                let hostVC = self.window?.rootViewController
+                let alert = UIAlertController(title: "Login Error", message: "Please sign in with your University Account", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+                alert.addAction(ok)
+                hostVC?.present(alert, animated: true, completion: nil)
+                return
+                
+            }
+        }
+    
         let database = Database.database().reference()
         let storageref = Storage.storage().reference()
         
@@ -45,28 +77,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 }
             }
         })
-    }
+        }
     
-
-    var window: UIWindow?
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
+              withError error: Error!) {
+        GIDSignIn.sharedInstance().signOut()
+    }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url as URL!,
+        return GIDSignIn.sharedInstance().handle(url as URL?,
             sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
             annotation: options[UIApplicationOpenURLOptionsKey.annotation])
-    }
-    
-    override init() {
-        super.init()
-        FirebaseApp.configure()
     }
    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GIDSignIn.sharedInstance().clientID = "1012159059525-q2063fuqvlquk8bplni1tgbd7albbgp5.apps.googleusercontent.com"
+        FirebaseApp.configure()
+        
+        //GIDSignIn.sharedInstance().clientID = "1012159059525-q2063fuqvlquk8bplni1tgbd7albbgp5.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-        
-        
         
         return true
     }
@@ -95,4 +125,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
 
 }
-

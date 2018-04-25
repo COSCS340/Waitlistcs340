@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleSignIn
+import Firebase
 
 var devstatus = true
 
@@ -50,6 +51,7 @@ class ModeViewController: UIViewController, GIDSignInUIDelegate {
         
         
         GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
         
         let googleSignInButton = GIDSignInButton()
         googleSignInButton.center = view.center
