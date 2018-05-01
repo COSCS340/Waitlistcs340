@@ -43,7 +43,7 @@ We started out using mainly using the iPhone simulator in Xcode to test the app.
 
 Team member roles:
 
-Since Avie has previous experience working on iOS applications, we decided that he is the team leader. Avie has been assigning issues to everyone and helping all the team members. We all have been working on our assigned issues and contributing to the app. Going forward, the team member roles will be the same. 
+Since Avie has previous experience working on iOS applications, we decided that he is the team leader. Avie has been assigning issues to everyone and helping all the team members. We all have been working on our assigned issues and contributing to the app. The team member roles stayed the same throughout the project. 
 
 
 ## Project Management:
