@@ -10,20 +10,16 @@ Members: Avie Desai, Naveli Shah, Ben Chesney, Surya Manikonda
 
 ## Introduction:
 
-Highlights:
-
-So far, we have managed to create and successfully build a prototype of the application. We have created a home page to display different restaurants and their waiting times so that the user can check-in. Since our app is based on user check-in and check-out we have created a page to let the user tell us whether they received their food yet (checking out). We also have a feedback page to rate the app and submit any comments.
-
 Overview:
 
-We have not made any changes, and have followed the design and other requirements mentioned in the proposal.
+For our final project, we decided to make a prototype of an iOS application. Our goal was to create a working prototype of an app that could potentially reduce the waiting times to get food at restaurants around campus and help users manage time. So, we developed a prototype called Waitlist. This is the most effective way users can check the waiting times to get food at different restaurant locations across the campus just by using an application. Our approach was to get the basic core functionality working, then add features to improvise the project. We have successfully created a working prototype which has a home page to display different restaurants and their waiting times so that the user can check-in. Since our app is a user based app, we have created a page to let the user tell us whether they received their food yet (checking out). We also have a feedback page to rate the app and submit any comments. 
 
 
 ## Customer Value:
 
-No changes were made from the original project proposal.
+No changes were made from the status report.
 
-As mentioned in the project proposal, the Waitlist app is specifically designed for students who are living on and around the UT campus. It can be exhausting for students to stand-in long lines, and wait longer to get food, especially during the lunch hours. If they are thinking about getting food but are in a rush or have less time between classes, they could easily look up the waiting times and determine if they can get food in less time than usual. This can save them time or maybe open up extra free time, as opposed to going to a restaurant and wait longer to be in-line and get food. By using our Waitlist app, students can manage their time wisely, as it cut downs the waiting time to get food.
+As mentioned in the project proposal, the Waitlist app is specifically designed for students and faculty at the University of Tennessee. It can be exhausting for students to stand-in long lines, and wait longer to get food, especially during the lunch hours. If they are thinking about getting food but are in a rush or have less time between classes, they could easily look up the waiting times and check if they can go and get food in less time than usual. This can save them time or maybe open up extra free time, as opposed to going to a restaurant and wait longer to be in-line and get food. By using our Waitlist app, students can manage their time wisely, as it cut downs the waiting time to get food and help them make better dining choices. 
 
 ## Technology:
 
