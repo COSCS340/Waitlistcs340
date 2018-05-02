@@ -54,4 +54,6 @@ Overall, we met our goals based on our originial schedule. We added on features 
 
 ## Reflection:
 
-Many things went well, such as the team structure, all team members contributing to the project, and completing and reaching the deadlines. With the team structure being successful, we haven’t been creating issues in GitHub but communicating within the team to assign which team member gets which task to complete. As we continue working on the project, we will specifically use the issues feature on GitHub to easily view and track the changes we make to the project.
+Many things went well such as the team structure. All of the team members were willing to contribute to the project to reach the deadlines and propose meaningful ideas. Each team member was motivated to learn the new language, Swift, and make something useful, Waitlist. Even when we hit roadblocks, it pushed us to communicate with each other and arrive at a decent solution. Avie, the team lead, had some familiarity with coding in Swift, which helped us get started quickly with the project. Everybody contributed on how to develop the app in such a way to provide the functionality discussed in the initial proposal describing what kind of app it should be.
+
+
